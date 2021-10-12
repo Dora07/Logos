@@ -1,19 +1,35 @@
-//
-//  ViewController.swift
-//  Logos
-//
-//  Created by 謝孟芩 on 2021/10/12.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    //日期
+    @IBOutlet weak var DateLabel: UILabel!
+    //祈求textfield
+    @IBOutlet weak var UserThinkTextField: UITextField!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+      TodayDate()
+       
+        
     }
 
+    //今天日期
+    func TodayDate()
+    {
+        let Today = Date()
+        let dateFormatter  = DateFormatter()
+        //日期文字樣式
+        dateFormatter.dateFormat = "今天是西元YYYY年MM月dd日"
+          //日期地區
+            dateFormatter.locale = Locale(identifier: "zh_TW")
+            let TodayString = dateFormatter.string(from: Today)
+            DateLabel.text =  TodayString
+    }
+    
 
 }
 
