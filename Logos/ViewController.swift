@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController , UITextFieldDelegate
 {
     //日期
     @IBOutlet weak var DateLabel: UILabel!
@@ -13,6 +13,8 @@ class ViewController: UIViewController
         super.viewDidLoad()
        
       TodayDate()
+        //執行UITextFieldDelegate
+        UserThinkTextField.delegate = self
        
         
     }
@@ -30,6 +32,35 @@ class ViewController: UIViewController
             DateLabel.text =  TodayString
     }
     
+    
+    //當點擊鍵盤以外的畫面隱藏鍵盤
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //按Return鍵隱藏鍵盤
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            UserThinkTextField.resignFirstResponder()
+            return true
+        }
+    
+    
+    
+    //將textfield資料傳遞至第二頁
+    @IBSegueAction func UserSay(_ coder: NSCoder) -> SecondViewController?
+    {
+        let controller = SecondViewController(coder: coder)
+        controller?.UserTextField = UserThinkTextField.text
+        
+        return controller
+    }
+  
+    
 
+    
+    
+    
+    
+    
 }
 

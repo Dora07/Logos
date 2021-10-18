@@ -61,7 +61,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Next"/>
                                 <connections>
-                                    <segue destination="zyf-bo-JsB" kind="show" id="RpS-bq-Mz9"/>
+                                    <segue destination="zyf-bo-JsB" kind="show" destinationCreationSelector="UserSay:" id="cYH-of-l7f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-Bf-T1a">
@@ -86,30 +86,31 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="dda-4J-6is">
             <objects>
-                <viewController id="zyf-bo-JsB" sceneMemberID="viewController">
+                <viewController id="zyf-bo-JsB" customClass="SecondViewController" customModule="Logos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H5E-lO-g5x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1002" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-np-a61">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-np-a61">
                                 <rect key="frame" x="36" y="138" width="342" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【編號：1002幸福卡】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-HV-C6n">
-                                <rect key="frame" x="20" y="450" width="234" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-HV-C6n">
+                                <rect key="frame" x="20" y="495" width="234" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-mK-YmY">
-                                <rect key="frame" x="11" y="497" width="393" height="311"/>
+                                <rect key="frame" x="11" y="530" width="393" height="278"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">你們中間若有缺少智慧的，應當求那厚賜與眾人，也不斥責人的神，主就必賜給他。  你有一顆溫柔的心，也非常樂意去幫助別人，但常常事與願違的做錯事、說錯話、傳錯情，以致於讓你覺得心灰意冷、對人冷淡！  上帝說：「孩子我知道你的心，你已經做的很好！今天我要賜給你從天而來的智慧，有能力愛自己＆愛身邊的人！」
+                                <string key="text" base64-UTF8="YES">
+Cg
 </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -119,19 +120,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXh-sS-UCj">
+                                <rect key="frame" x="20" y="451" width="234" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XR0-FL-muG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="M05-9R-5lv"/>
+                    <connections>
+                        <outlet property="BibleImage" destination="JdA-np-a61" id="dZ9-tA-GXJ"/>
+                        <outlet property="BibleTextView" destination="c3P-mK-YmY" id="2dH-Xu-D2C"/>
+                        <outlet property="BibleTitleLabel" destination="ELx-HV-C6n" id="xem-td-KqQ"/>
+                        <outlet property="UserThink" destination="OXh-sS-UCj" id="Tst-Cw-3Mf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK3-IM-2o9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="88"/>
+            <point key="canvasLocation" x="818.84057971014499" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1002" width="500" height="500"/>
         <image name="Next" width="648" height="162"/>
         <image name="home" width="1506" height="450"/>
         <systemColor name="labelColor">
